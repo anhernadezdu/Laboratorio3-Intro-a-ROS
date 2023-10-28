@@ -7,7 +7,12 @@ Primero se trabajo en la conexión de matlab con ROS para esto se uso una intala
 2. Se creo un scrip con el cual se pude saber los valores de la pose de tortuga ([Scrip 2](https://github.com/anhernadezdu/Laboratorio3-Intro-a-ROS/blob/main/MatlabLab3_2.m).). Se mantuvieron las dos terminales anteriores corriendo para esto y se comprobo la pose que tenia la tortuga dado el scrip anterior.
 3. Se creo un scrip el cual permite controlas todos los elementos de la pose de la tortuga(movimiento en los ejes X y Y y rotación en el eje Z) ([Scrip 3](https://github.com/anhernadezdu/Laboratorio3-Intro-a-ROS/blob/main/MatlabLab3_3.m).)
 4. Se consulto en los repositorios las funciones que tiene MATLAB para trabajar con ROS para encotnrar cual es la que permite finalizar el nodo maestro en MATLAB
-
+### Conexion con Python
+Se realiza el siguiente procedimiento:
+1. Usando las librerias proporcionadas en la guia, junto con los enlaces provistos, se utilizo la funcion _getkey()_ para poder recibir las teclas que se oprimen en Linux.
+2. Una vez hechos con la funcion descrita anteriormente, la funcion _main_ inicializa el nodo de ROS usando el comando _rospy.init_node()_ y  usando un publisher con el comando _rospy.Publisher()_  con topic : cmd_vel, se controla la velocidad de la tortuga y todos sus movimientos.
+3. Usando los _ServiceProxy_ que ocupan los recursos de _TeleportAbsolute_ y _TeleportRelative_ se crean las funciones _TeleportA_ y _TeleportR_ para reiniciar la posicion de la tortuga y girarla 180°, respectivamente. Cabe destacar que el giro de 180° que realiza la otrtuga con _TeleportR_ lo realiza respecto a su orientacion en ese instante.
+4. Finalmente se crea un ciclo _while_ el cual permite guardar el valor de la tecla presionada y usando condicionales se determina si se presiono la tecla "w", "s", "a" o "d"; para lo cual se efectuan los cambios en la velocidad linear para las dos primeras teclas, y en la velocidad angular para las ultimas dos. En caso de presionar la tecla "r" o la barra espaciadora, se usan los ServiceProxy definidos para reiniciar posicion de la tortuga y realizar una rotacion realtiva, respectivamente.
 ## Resultados
 ### Conexión con MATLAB
 **Scrip1**
@@ -36,3 +41,5 @@ Como se puede observar la imagen vemos en la consola los valores obtenidos en Po
 ## Análisis
 
 ## Conclusiones
+1. Fue vital tener en cuenta la compatibilidad de los sistemas operativos con ROS, ademas de realizar una previa investigacion en la red acerca de la operabilidad en el sistema operativo Linux para el desarrollo de la practica.
+2. ServiceProxy permite reutilizar servicios y módulos de software ademas de que facilitan contruccion de un codigo compacto que tambien puede ser reutilizado para futuras aplicaciones.
