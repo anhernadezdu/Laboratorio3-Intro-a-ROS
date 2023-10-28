@@ -59,7 +59,9 @@ La conexión con MATLAB en especial de forma nativa es muy sencilla en el scrip 
 Con el manejo de mensajes y de subscriptores podemos generara comunicacions y envios de información de una forma muy rapida entre nodos e intancias en el sistema de linux permitiendo que se tengan tiempos de respuesta y calculos muy eficientes en cuanto a tiempoi de ejecución.
 
 Además la interfaz grafica que permite tener turtlesim ayuda mucho para que el usurario vea de una forma más real como es que se ejecutan los movimientos y los resultados de calculos que genera con los comandos generados.
-
+### Conexion con Python
+Al investigar acerca de que problemas traia el usar la libreria _keyboard_ de python para la captura de caracteres se descubrio que es debido a las multiples capas adiministrativas de Linux para el uso de perifericos, la administracion de los permisos necesarios para usar aquella libreria lo volveria un codigo innecesariamente complicado. Por lo cual una opcion con menos complejidad, es usar el codigo proporcionado en los enlaces de la guia donde se usa la libreria _msvcrt_ o por otro lado se podira usar la libreria _pynput_ la cual tambien permite realizar la captura de caracteres pero con ciertas limitaciones. 
+Cabe destacar que las ultimas 2 librerias mencionadas estan hechas basadas en el sistema operativo de Linux minetras que la primera mencionada esta hecha sobre Windows, otra razon por la cual se generan las incopatibilidades.
 ## Conclusiones
 1. Fue vital tener en cuenta la compatibilidad de los sistemas operativos con ROS, ademas de realizar una previa investigacion en la red acerca de la operabilidad en el sistema operativo Linux para el desarrollo de la practica.
 2. ServiceProxy permite reutilizar servicios y módulos de software ademas de que facilitan contruccion de un codigo compacto que tambien puede ser reutilizado para futuras aplicaciones.
