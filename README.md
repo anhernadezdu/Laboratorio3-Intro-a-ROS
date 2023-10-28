@@ -11,6 +11,16 @@ Primero se trabajo en la conexión de matlab con ROS para esto se uso una intala
 ## Resultados
 ### Conexión con MATLAB
 **Scrip1**
+En este scrip se tienen tres secciones:
+1. Inalizcion del nodo maestro en matlab
+2. La creacion del publicador el cual genera el enlace con el nodo y modificara el valores del nodo de la tortuga y el mensaje que se enviara al nodo para manipularlo.
+3. El valor del mensaje para alterar el valor en el eje X y el envio al nodo
+
+Como se puede ver en la imagen al correrse el scrip se obtiene un movimiento en X de una unidad este valor se puede alterar al cambiar en la sección 3 del scrip el valor de velMsg.Lineal.X
+
+![Imagen de WhatsApp 2023-10-27 a las 22 22 56_a014bd4e](https://github.com/anhernadezdu/Laboratorio3-Intro-a-ROS/assets/70998067/d39c09e8-cad2-4300-811b-8542d4b7c9d8)
+
+![Imagen de WhatsApp 2023-10-27 a las 22 22 56_f645fdcf](https://github.com/anhernadezdu/Laboratorio3-Intro-a-ROS/assets/70998067/b8d4b068-24a5-439e-b48b-30643dc4f581)
 
 ## Análisis
 
