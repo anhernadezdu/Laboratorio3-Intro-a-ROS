@@ -10,7 +10,7 @@ Primero se trabajo en la conexión de matlab con ROS para esto se uso una intala
 
 ## Resultados
 ### Conexión con MATLAB
-**Scrip1**
+**Scrip1** \n
 En este scrip se tienen tres secciones:
 1. Inalizcion del nodo maestro en matlab
 2. La creacion del publicador el cual genera el enlace con el nodo y modificara el valores del nodo de la tortuga y el mensaje que se enviara al nodo para manipularlo.
