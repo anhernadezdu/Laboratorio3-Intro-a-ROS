@@ -52,6 +52,9 @@ Volviendo a correr el scrip2 podemos ver que en efecto se tuvieron los movimient
 
 ![Imagen de WhatsApp 2023-10-27 a las 22 42 54_bd6148c8](https://github.com/anhernadezdu/Laboratorio3-Intro-a-ROS/assets/70998067/42da5a14-c788-4482-be47-85f37d0d6fb2)
 
+### Conexion con Python
+![WhatsApp Image 2023-10-27 at 23 49 16](https://github.com/anhernadezdu/Laboratorio3-Intro-a-ROS/assets/70985250/bb240342-0176-45bd-8710-83e1aeced6f1)
+
 ## Análisis
 ### Conexión con MATLAB
 La conexión con MATLAB en especial de forma nativa es muy sencilla en el scrip siendo necesaria solo una linea de codigo para generarla, con matlab tenemos comandos muy sencillos de manejar que permiten tener un gran manejo de ROS. Aparte la unión de las dos herramientas genera un manejo más amable de ROS para personas no tan familiarizas con linux.
