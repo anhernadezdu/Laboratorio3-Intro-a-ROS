@@ -37,9 +37,30 @@ Como se puede observar la imagen vemos en la consola los valores obtenidos en Po
 
 ![Imagen de WhatsApp 2023-10-27 a las 22 31 34_b949535e](https://github.com/anhernadezdu/Laboratorio3-Intro-a-ROS/assets/70998067/5ecec60a-952a-4804-a5ff-52f69d299bfb)
 
+**Scrip3**
+En este scrip se tienen 4 secciones secciones:
+1. Inalizcion del nodo maestro en matlab.
+2. ESpecificacion de cuantas unidades se desea cambiar la posicion en X y Y y cuanto en theta para la orientación de la tortuga
+3. La creacion del publicador el cual genera el enlace con el nodo y modificara el valores del nodo de la tortuga y el mensaje que se enviara al nodo para manipularlo.
+4. El valor del mensaje para alterar el valor en el eje X, el el eje Y, la rotación en Z y el envio al nodo.
+
+Como se ve en la siguente imagen enviamos valores para cambiar la posición en Y en 1 unidad y la rotación en z tambien en 1 unidad.
+
+   ![Imagen de WhatsApp 2023-10-27 a las 22 42 54_3889d03c](https://github.com/anhernadezdu/Laboratorio3-Intro-a-ROS/assets/70998067/699a8312-0940-47be-b5f6-40fc9c399f3f)
+
+Volviendo a correr el scrip2 podemos ver que en efecto se tuvieron los movimientos deseados con unos pequeños errores que tiene el calulo interno en el nodo pero que son aceptables en el rango de acción que tenemos.
+
+![Imagen de WhatsApp 2023-10-27 a las 22 42 54_bd6148c8](https://github.com/anhernadezdu/Laboratorio3-Intro-a-ROS/assets/70998067/42da5a14-c788-4482-be47-85f37d0d6fb2)
 
 ## Análisis
+### Conexión con MATLAB
+La conexión con MATLAB en especial de forma nativa es muy sencilla en el scrip siendo necesaria solo una linea de codigo para generarla, con matlab tenemos comandos muy sencillos de manejar que permiten tener un gran manejo de ROS. Aparte la unión de las dos herramientas genera un manejo más amable de ROS para personas no tan familiarizas con linux.
+
+Con el manejo de mensajes y de subscriptores podemos generara comunicacions y envios de información de una forma muy rapida entre nodos e intancias en el sistema de linux permitiendo que se tengan tiempos de respuesta y calculos muy eficientes en cuanto a tiempoi de ejecución.
+
+Además la interfaz grafica que permite tener turtlesim ayuda mucho para que el usurario vea de una forma más real como es que se ejecutan los movimientos y los resultados de calculos que genera con los comandos generados.
 
 ## Conclusiones
 1. Fue vital tener en cuenta la compatibilidad de los sistemas operativos con ROS, ademas de realizar una previa investigacion en la red acerca de la operabilidad en el sistema operativo Linux para el desarrollo de la practica.
 2. ServiceProxy permite reutilizar servicios y módulos de software ademas de que facilitan contruccion de un codigo compacto que tambien puede ser reutilizado para futuras aplicaciones.
+3. La intercomunicación entre nodos e intancias dentro de linux permiten una facil interconexión entre diferentes partes del sistema y programas que se tienen intalados en el equipo de computo. 
